@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 23-09 JS - Web API DOM</title>
+    <link rel="stylesheet" href="clase-2309.css">
+</head>
+
+
+<body>
+
+    <div>
+        <h1 id="title">
+            ManipulanDOM
+        </h1>
+    </div>
+    
+    <div class="main-div">
+        Imagen de ejemplo: 
+        <br>
+        <img src="https://raw.githubusercontent.com/RaulAM7/dom-manipulation-examples/58c27aef9ff0769f16fa63d5947371cbe488b345/javascript.svg" alt="Imagen Original">
+    </div>
+
+    <div class="old-div">
+        Este DIV se eliminará
+    </div>
+
+    <div class="cambiaParrafos">
+        <p id="primerParr">
+            Este es un parrafo de prueba
+        </p>
+    </div>
+    
+    <div class="cambiaBotones">
+        <p id="segundoParr">
+            Aquí cambiaremos estos botones 
+        </p>
+        <button onclick="changeColor('blue');">blue</button>
+        <button onclick="changeColor('red');">red</button>
+    </div>
+
+
+    <div class="classPrueba-container">
+        <div class="classPrueba">
+            <p class="parrafosPrueba">Prueba 1</p>
+            <p class="parrafosPrueba">Prueba 2</p>
+            <p class="parrafosPrueba">Prueba 3</p>
+        </div>
+        <div class="classPrueba">
+            <p class="parrafosPrueba">Prueba 4</p>
+            <p class="parrafosPrueba">Prueba 5</p>
+            <p class="parrafosPrueba">Prueba 6</p>
+        </div>
+        <div class="classPrueba">
+            <p class="parrafosPrueba">Prueba 7</p>
+            <p class="parrafosPrueba">Prueba 8</p>
+            <p class="parrafosPrueba">Prueba 9</p>
+        </div>
+    </div>
+
+
+<script type="module" src="clase-2309.js"></script>
+
+</body>
+</html>
