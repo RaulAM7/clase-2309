@@ -1,6 +1,6 @@
 // SELECCTING DOM ELEMENTS
 
-console.log(window)
+//console.log(window)
 
 const primerParr = document.getElementById('primerParr')
 
@@ -85,4 +85,25 @@ console.log(selectingAllP.forEach(function(element, index){
 
 }))
 */
+
+const myParrafElements = document.getElementsByClassName("testInner")
+
+const myFirstParraf =  myParrafElements[0]
+
+const namePElement = myFirstParraf.getAttribute('name')
+console.log(namePElement)
+
+const mySecondParraf = myParrafElements[1]
+
+//Vamos a meterle un atributo name="second-parrafo"
+
+mySecondParraf.setAttribute('name', 'second-parraf')
+
+const nameSecondParraf = mySecondParraf.getAttribute('name')
+
+console.log(nameSecondParraf)
+
+// Vamos a quitarle ese nuevo atributo
+
+mySecondParraf.removeAttribute('name')
 
