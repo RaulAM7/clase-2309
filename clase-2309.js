@@ -37,7 +37,7 @@ console.log(test) // Tras cambiarlo
 
 // Cambiando inner HTML
 
-const parent = document.getElementById('parent1-id')
+const parent1 = document.getElementById('parent1-id')
 
 console.log('Antes de cambiar el innerHtml de un parent')
 console.log(parent)
@@ -120,3 +120,35 @@ newDiv.innerText = 'Este es el nuevo Text Content del nuevo Div creado'
 newDiv.setAttribute('class', 'new-Div-class')
 
 newDiv.setAttribute('id', 'parent2-id')
+
+
+
+
+
+// INSERTANDO ELEMENTOS
+
+// lo creamos
+const newParrInserted = document.createElement('p')
+
+newParrInserted.setAttribute('class', 'parrafs')
+newParrInserted.setAttribute('name', 'newParr')
+newParrInserted.innerText = 'Nuevo Parrafo creado en JS e insertado'
+
+
+// Lo insertamos AL FINAL en el div con id parent1 y .appendChield()
+//parent1.appendChild(newParrInserted)
+
+// Lo insertamos .insertBefore(NewNode, Childreference)
+
+const father1 = document.getElementById("parent1-id")
+
+const childReferenceParent1 = document.querySelector('#parent1-id>p:nth-child(5)')
+
+father1.insertBefore(newParrInserted, childReferenceParent1)
+
+
+// BORRANDO ELEMENTOS DOM
+
+const parrafBorrar = document.querySelector('#parent1-id>p:nth-child(1)')
+
+father1.removeChild(parrafBorrar)
