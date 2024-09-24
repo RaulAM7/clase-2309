@@ -19,7 +19,7 @@ img {
     background-color: #e0e0e0;
     padding: 10px;
 }
-  
+
 .cambiaParrafos {
     padding: 10px;
     margin-top: 20px;
@@ -43,3 +43,9 @@ img {
     color: red;
 }
 
+
+#parent1-id {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
