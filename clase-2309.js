@@ -107,3 +107,16 @@ console.log(nameSecondParraf)
 
 mySecondParraf.removeAttribute('name')
 
+
+
+// CREANDO ELEMENTOS DEL DOM 
+
+const newDiv = document.createElement('div')
+
+console.log(newDiv)
+
+newDiv.innerText = 'Este es el nuevo Text Content del nuevo Div creado'
+
+newDiv.setAttribute('class', 'new-Div-class')
+
+newDiv.setAttribute('id', 'parent2-id')
