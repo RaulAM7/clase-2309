@@ -152,3 +152,87 @@ father1.insertBefore(newParrInserted, childReferenceParent1)
 const parrafBorrar = document.querySelector('#parent1-id>p:nth-child(1)')
 
 father1.removeChild(parrafBorrar)
+
+
+// EVENTS 
+
+/* Que son los Events? son todo tipo de interaccion entre la web y el usuario
+
+*/
+
+// USER <-> BROWSER <-> EventHandler
+
+// Event Handler -> Casi todo son Callbacks
+
+/* callbackFn ¿Qué era? -> Una funcion definida en el codigo en cualquier lado 
+y a la que se llama en cualquier momento como argumento/parametro 
+
+*/
+
+const fatherButton = document.getElementById('parent1-id')
+
+const allParrafsTags = document.getElementsByTagName('p')
+
+console.log('Este es el parrafo que quiero ver')
+console.log(allParrafsTags[4])
+
+const buttonOrder = document.getElementById('AddParrafButton')
+
+buttonOrder.addEventListener('click', addParraf)
+
+function addParraf () {
+    console.log('Hiciste click en el boton de Añadir parrafs!')
+    fatherButton.appendChild(allParrafsTags[4])
+}
+
+/*
+console.log('fatherButton:', fatherButton);
+console.log('allParrafsTags:', allParrafsTags);
+console.log('buttonOrder:', buttonOrder);
+*/
+
+const buttonRemove = document.getElementById('buttonRemove')
+
+buttonRemove.addEventListener('click', removeListener)
+
+function removeListener(){
+    console.log('Hiciste click en REMOVE CAPACIDAD DE AÑADIR PARRFS')
+    buttonOrder.removeEventListener('click', addParraf)
+}
+
+
+
+
+// Queremos cambiar a mano el value default de un input a manija en JS
+
+// traemos el primer input
+
+const inputArriba = document.getElementsByTagName('input')[0]
+
+// traemos el boton que queremos
+
+const button = document.getElementById('addnameButton')
+
+// traemos la lista a la que queremos añadirlo
+
+const ulNamesList = document.getElementById('names-list')
+
+inputArriba.value = 'Reboot Academy...'
+
+
+// Vamos a hacer el code para añadir elementos a la lista
+
+
+const buttonaddToList = document.getElementById('addToListButton')
+
+function addToNamesList () {
+    const newLi = document.createElement('li')
+    newLi.innerText = inputArriba.value
+    
+    ulNamesList.appendChild(newLi)
+
+    console.log('NewLi creado!')
+    
+}
+
+buttonaddToList.addEventListener('click', addToNamesList)
