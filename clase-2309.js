@@ -236,3 +236,35 @@ function addToNamesList () {
 }
 
 buttonaddToList.addEventListener('click', addToNamesList)
+
+
+
+const buttonPrintEventObject = document.getElementById('printEventObject')
+
+buttonPrintEventObject.addEventListener('click', printEventObject)
+
+function printEventObject(e){
+    console.log('Esto es un Event Object')
+    console.log(e)
+    console.log(e.target)
+    console.log(e.target.innerText)
+
+    if (e.ctrlKey){
+        console.log('CTRL key was pressed while clickking')
+    }
+    if (e.altKey)
+        console.log('ALT key was pressed while clickking')
+
+}
+
+const liEventObjectPrueba = document.getElementById("listPruebaPaObject")
+
+for (let i = 0 ; i < liEventObjectPrueba.length ; i++){
+    liEventObjectPrueba[i].addEventListener('click', addtoList)
+}
+
+function addtoList (e){
+    if (e.target.tagName === "LI"){
+        console.log(e.target.innerText)
+    }
+}
